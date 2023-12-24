@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All Users Roll Data</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='adstyle.css') }}">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <a href="admin.html">
+                    <img src="{{ url_for('static', filename='Blue_Archive_logo.svg.png') }}" alt="logo"> 
+                </a>
+                <h1>ALL USERS ROLLS DATA</h1>       
+            </header>
+            <table id="main">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Tix_10</th>
+                        <th>Tix_1</th>
+                        <th>Gems</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for roll in rolls_data %}
+                        <tr>
+                            <td>{{ roll.user_id }}</td>
+                            <td>{{ roll.tix_10 }}</td>
+                            <td>{{ roll.tix_1 }}</td>
+                            <td>{{ roll.gems }}</td>
+                            <td>{{ roll.total }}</td>
+                            <td>
+                                <form id="deleteForm_{{ roll.user_id }}" action="/delete_user" method="post">
+                                    <input type="hidden" name="user_id" value="{{ roll.user_id }}">
+                                    <input type="button" value="Delete" onclick="confirmDelete('{{ roll.user_id }}')">
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/home"><button>Back</button></a>
+        </div>
+        <script>
+            function confirmDelete(userId) {
+                if (confirm("Are you sure you want to delete this user?")) {
+                    document.getElementById("deleteForm_" + userId).submit();
+                }
+            }
+        </script>
+    </body>
+</html>

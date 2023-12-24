@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='regstyle.css') }}">
+    <script>
+        function displayError() {
+            alert("Username exists. Please try again.");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="register-wrapper">
+        <header>
+            <a href="index.html">
+                <img src="{{ url_for('static', filename='Blue_Archive_logo.svg.png') }}" alt="logo"> 
+            </a>
+            <h1>Register</h1>
+        </header>
+
+        <form action="/form_register" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <!--
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            -->
+            <button type="submit">Register</button>
+        </form>
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('register_failure')) {
+                displayError();
+            }
+        </script>
+        <p>Already have an account? <a href="/form_login">Login here</a>.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content = "width=device-width, initial-scale=1.0">
+    <title>Rolls Counter</title>
+    <style>
+        h5 {
+            color:blue;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+    <body class="rolls">
+        <div id="wrapper">
+            <header>
+                <a href={{ url_for('home')}}>
+                <img src="{{ url_for('static', filename='Blue_Archive_logo.svg.png') }}" alt="logo"> 
+                </a>
+                <div class="user-info">
+                    <h5>Welcome, {{ username }}!</h5>
+                </div>
+                <h1>BLUE ARCHIVE</h1>
+                <nav>
+                    <ul>
+                        <li class="active"><a href={{ url_for('home')}}>Home</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>      
+                <h1>Rolls Counter</h1>
+            </header>
+        </div>
+        <div id="roll">
+            {% if rolls_data %}
+            <div class="text-container">
+                <p>10 Tickets: {{ rolls_data.tix_10 }}</p><br>
+                <p>1 Ticket: {{ rolls_data.tix_1 }}</p><br>
+                <p>Gems: {{ rolls_data.gems }}</p><br>
+                <p>Total: {{ rolls_data.total }}</p><br>
+            </div>
+            <form action="/edit_rolls" method="post" onsubmit="return confirmSave()">
+                <input type="text" name="tix_10" placeholder="x10 Tickets"><br>
+                <input type="text" name="tix_1" placeholder="x1 Tickets"><br>
+                <input type="text" name="gems" placeholder="Gems"><br>
+                <button type="submit">Save</button><br>
+            </form>
+            <br>
+            &nbsp;&nbsp;&nbsp;<a href="/rolls"><button>Back</button></a>
+            {% else %}
+                <p>No rolls data found.</p>
+            {% endif %}
+        </div>
+    </body>
+    <script>
+        function confirmSave() {
+            var confirmation = confirm("Are you sure you want to save these changes?");
+            return confirmation;
+        }
+    </script>
+</html>

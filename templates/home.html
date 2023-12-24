@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content = "width=device-width, initial-scale=1.0">
+        <title>
+            Welcome
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <a href="/home">
+                <img src="{{ url_for('static', filename='Blue_Archive_logo.svg.png') }}" alt="logo"> 
+                </a>
+                <div class="user-info">
+                    <h5>Welcome, {{ username }}!</h5>
+                </div>
+                <h1>BLUE ARCHIVE</h1>
+                <nav>
+                    <ul>
+                        <li class="active"><a href="/home">Home</a></li>
+                        <li><a href="/rolls">Rolls Counter</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main id="main">
+                <p>
+                    WELCOME USER TO THE HOME PAGE
+                </p>
+            </main>
+        </div>
+    </body>
+</html>

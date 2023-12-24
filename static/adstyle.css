@@ -1,0 +1,85 @@
+body {
+    background-image: url("Background3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: 'G2 Sans Serif', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header img {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-top: 10px;
+    color: #2B2B2B
+}
+
+table {
+    border: 1px solid #fff;
+    width: 80%;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #fff;
+}
+
+table th {
+    background-color: #1288F8;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+    background-color: #1288F8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+#main {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}

@@ -1,0 +1,251 @@
+body {
+    background-image: url("Background3.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    color: #fff;
+    font-family: 'G2 Sans Serif', sans-serif;
+}
+
+#wrapper {
+    flex: 1;
+}
+
+#main {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+#roll{
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#main h2 {
+    font-family: Verdana, Arial, sans-serif;
+    text-align: center;
+    color: #fff
+}
+#main p {
+    font-size: 20px;
+    font-family: Verdana, Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img{
+    width: 250px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-family: Verdana, Arial, sans-serif;
+    color: White;
+    text-shadow: 0 0 10px #1288F8, 0 0 10px #1288F8, 0 0 10px #1288F8, 0 0 10px #1288F8, 0 0 10px #1288F8, 0 0 10px #1288F8, 0 0 10px #1288F8;
+}
+
+nav {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 3px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: Black;
+    font-family: 'G2 Sans Serif', sans-serif;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+nav li.active a{
+    background-color: #1288F8;
+    color: #fff;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+nav a:hover {
+    color: #1288F8;
+}
+
+.login-register {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'G2 Sans Serif', sans-serif;
+}
+
+.login-register a {
+    border: 2px solid #00f;
+    padding: 3px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 30px;
+    margin-left: 10px;
+    color: #004080; /* Set the color for the Log-In and Register links */
+}
+
+form {
+    align-items: center;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+    color: #004080; /* Set the hover color for the Log-In and Register links */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #00f;
+}
+
+a {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-right: 15px; 
+}
+
+body.rolls {
+    background-image: url('Background3.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    margin: 0;
+}
+
+#rolls-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#rolls-inputs {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+input {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+
+button {
+    background-color: #1288F8;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#total-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+}
+
+#total-value {
+    font-size: 32px;
+    color: #00f;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info span {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 25px;
+    color: black;
+}
+
+.user-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+body.rolls {
+    background-image: url('Background3.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    margin: 0;
+}
+
+.text-container p {
+    display: inline-block;
+    background-color: #92c3f2;
+    padding: 10px 20px;
+    margin: 5px 2;
+    border-radius: 5px;
+  }
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h5 {
+    color:blue;
+}
